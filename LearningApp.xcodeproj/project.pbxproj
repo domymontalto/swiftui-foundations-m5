@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D376B945294EAB91000D251E /* LearningAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376B944294EAB91000D251E /* LearningAppApp.swift */; };
-		D376B947294EAB91000D251E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376B946294EAB91000D251E /* ContentView.swift */; };
+		D376B945294EAB91000D251E /* LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376B944294EAB91000D251E /* LearningApp.swift */; };
+		D376B947294EAB91000D251E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376B946294EAB91000D251E /* HomeView.swift */; };
 		D376B949294EAB92000D251E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D376B948294EAB92000D251E /* Assets.xcassets */; };
 		D376B94C294EAB92000D251E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D376B94B294EAB92000D251E /* Preview Assets.xcassets */; };
 		D376B956294EAB92000D251E /* LearningAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376B955294EAB92000D251E /* LearningAppTests.swift */; };
 		D376B960294EAB92000D251E /* LearningAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376B95F294EAB92000D251E /* LearningAppUITests.swift */; };
 		D376B962294EAB92000D251E /* LearningAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376B961294EAB92000D251E /* LearningAppUITestsLaunchTests.swift */; };
+		D376B975294EACDA000D251E /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376B974294EACDA000D251E /* ContentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +36,8 @@
 
 /* Begin PBXFileReference section */
 		D376B941294EAB91000D251E /* LearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D376B944294EAB91000D251E /* LearningAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppApp.swift; sourceTree = "<group>"; };
-		D376B946294EAB91000D251E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D376B944294EAB91000D251E /* LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningApp.swift; sourceTree = "<group>"; };
+		D376B946294EAB91000D251E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D376B948294EAB92000D251E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D376B94B294EAB92000D251E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D376B951294EAB92000D251E /* LearningAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,7 @@
 		D376B95B294EAB92000D251E /* LearningAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D376B95F294EAB92000D251E /* LearningAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppUITests.swift; sourceTree = "<group>"; };
 		D376B961294EAB92000D251E /* LearningAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D376B974294EACDA000D251E /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,12 @@
 		D376B943294EAB91000D251E /* LearningApp */ = {
 			isa = PBXGroup;
 			children = (
-				D376B944294EAB91000D251E /* LearningAppApp.swift */,
-				D376B946294EAB91000D251E /* ContentView.swift */,
+				D376B944294EAB91000D251E /* LearningApp.swift */,
+				D376B96E294EAC2E000D251E /* Views */,
+				D376B96F294EAC37000D251E /* ViewModels */,
+				D376B971294EAC63000D251E /* Modules */,
+				D376B972294EAC6D000D251E /* Resources */,
+				D376B973294EAC7E000D251E /* Helpers */,
 				D376B948294EAB92000D251E /* Assets.xcassets */,
 				D376B94A294EAB92000D251E /* Preview Content */,
 			);
@@ -125,6 +131,43 @@
 				D376B961294EAB92000D251E /* LearningAppUITestsLaunchTests.swift */,
 			);
 			path = LearningAppUITests;
+			sourceTree = "<group>";
+		};
+		D376B96E294EAC2E000D251E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D376B946294EAB91000D251E /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D376B96F294EAC37000D251E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D376B974294EACDA000D251E /* ContentModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D376B971294EAC63000D251E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D376B972294EAC6D000D251E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D376B973294EAC7E000D251E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D376B947294EAB91000D251E /* ContentView.swift in Sources */,
-				D376B945294EAB91000D251E /* LearningAppApp.swift in Sources */,
+				D376B947294EAB91000D251E /* HomeView.swift in Sources */,
+				D376B945294EAB91000D251E /* LearningApp.swift in Sources */,
+				D376B975294EACDA000D251E /* ContentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
