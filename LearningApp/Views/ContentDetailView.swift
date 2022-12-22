@@ -55,7 +55,7 @@ struct ContentDetailView: View {
                 
                 Button(action: {
                     
-                    // Take the user back to the homevies
+                    // Take the user back to the HomeView
                     model.currentContentSelected = nil
                 }, label: {
                     

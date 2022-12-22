@@ -26,6 +26,7 @@
 		D3E48F4A29525EEB005BBA4C /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E48F4929525EEB005BBA4C /* ContentDetailView.swift */; };
 		D3E48F4D2952662C005BBA4C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E48F4C2952662C005BBA4C /* AVKit.framework */; };
 		D3E48F4F295267A8005BBA4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E48F4E295267A8005BBA4C /* Constants.swift */; };
+		D3FBE7C32953CE1F004A08BA /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE7C22953CE1F004A08BA /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		D3E48F4929525EEB005BBA4C /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		D3E48F4C2952662C005BBA4C /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		D3E48F4E295267A8005BBA4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D3FBE7C22953CE1F004A08BA /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				D33D0049295130E90034A29C /* ContentView.swift */,
 				D3E48F4729513E1F005BBA4C /* ContentViewRow.swift */,
 				D3E48F4929525EEB005BBA4C /* ContentDetailView.swift */,
+				D3FBE7C22953CE1F004A08BA /* TestView.swift */,
 				D3D1939C29528FF000FFF13E /* CodeTextView.swift */,
 				D3007ABD29539AA1000A335A /* RectangleCard.swift */,
 			);
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3FBE7C32953CE1F004A08BA /* TestView.swift in Sources */,
 				D376B947294EAB91000D251E /* HomeView.swift in Sources */,
 				D3162C5C2951251300876268 /* HomeViewRow.swift in Sources */,
 				D33D004A295130E90034A29C /* ContentView.swift in Sources */,
