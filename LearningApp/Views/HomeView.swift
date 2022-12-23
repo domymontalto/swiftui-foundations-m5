@@ -64,6 +64,16 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("Get Started")
+            .onChange(of: model.currentContentSelected) { changedValue in
+                if changedValue == nil {
+                    model.currentModule = nil
+                }
+            }
+            .onChange(of: model.currentTestSelected) { changedValue in
+                if changedValue == nil {
+                    model.currentModule = nil
+                }
+            }
         }
         .navigationViewStyle(.stack) // Puts the stack navigation view style and allows us to watch videos in the app
     }
