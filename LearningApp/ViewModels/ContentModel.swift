@@ -40,7 +40,11 @@ class ContentModel: ObservableObject {
     
     init() {
         
+        // Parse local included json data
         getLocalData()
+        
+        // Download remote json file and parse data
+        getRemoteData()
     }
     
     // MARK: - Data methods
@@ -59,7 +63,7 @@ class ContentModel: ObservableObject {
             let modules = try jsonDecoder.decode([Module].self, from: jsonData)  // .self to specify that [Module] is the type that we wanto to decode to
             
             // Assign parsed modules to modules property
-            self.modules = modules // Assign to modules at line 12
+            self.modules = modules // Assign to modules at line 13
         }
         catch{
             // TODO log error
@@ -82,6 +86,53 @@ class ContentModel: ObservableObject {
             print("Could't parse style data")
         }
         
+    }
+    
+    func getRemoteData() {
+        
+        // String path
+        let urlString = "https://domymontalto.github.io/learningapp-data/data2.json"
+        
+        // Create a url object
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            // Couldn't create url
+            return
+        }
+        
+        // Create a URLRequest object
+        let request = URLRequest(url:url!)
+        
+        // Get the session and kick off the task
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            
+            // Check if there is an error
+            guard error == nil else {
+                // There was an error
+                return
+            }
+
+            do {
+                // Create json decoder
+                let decoder = JSONDecoder()
+                
+                // Decode
+                let modules = try decoder.decode([Module].self, from: data!)
+                
+                // Append parsed modules into modules property
+                self.modules += modules
+            }
+            catch {
+                // Couldn't parse json
+            }
+            
+        }
+        
+        // Kick off data task
+        dataTask.resume()
     }
     
     // MARK: - Module navigation methods
