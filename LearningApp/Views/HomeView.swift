@@ -48,7 +48,9 @@ struct HomeView: View {
                                                 model.beginTest(module.id)
                                         }),
                                     tag: module.id,
+                                    // Set tag equal to the id of the module
                                     selection: $model.currentTestSelected,
+                                    // Set currentTestSelected to the module.id
                                                label: {
                                     // Test Card
                                     HomeViewRow(image: module.test.image, title: "\(module.category) Test", description: module.test.description, count: "\(module.test.questions.count) Questions", time: module.test.time)
